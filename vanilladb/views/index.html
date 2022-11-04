@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vanilla</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link href="/fontawesome/css/all.css" rel="stylesheet">
+  <script src="./moment.min.js"></script>
+ 
+  <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+  <div  class="container-fluit" style="padding: 1rem;">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="text-center">BREADS (Browse, Read, Edit, Add, Delete, Sort)</h1>
+      </div>
+      <input type="hidden" name="halaman" value="1">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <form action="/" method="post" id="form-users">
+              <div class="card">
+                <div class="card-body">
+                  <!-- String -->
+                  <div class="row">
+                    <div class="col-2">
+                      <label for="string" class="visually-hidden">string</label>
+                      <input type="text" readonly class="form-control-plaintext" value="String">
+                    </div>
+                    <div class="col-10">
+                      <div class="col-auto">
+                        <label for="string" class="visually-hidden">string</label>
+                        <input type="text" class="form-control" id="string" name="string" placeholder="string">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Akhir String -->
+                  <!-- Integer -->
+                  <div class="row">
+                    <div class="col-2">
+                      <label for="integer" class="visually-hidden">integer</label>
+                      <input type="text" readonly class="form-control-plaintext" value="Integer">
+                    </div>
+                    <div class="col-10">
+                      <div class="col-auto">
+                        <label for="integer" class="visually-hidden">interger</label>
+                        <input type="number" class="form-control" id="integer" name="integer" placeholder="integer">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Akhir integer -->
+                  <!-- awal float -->
+                  <div class="row">
+                    <div class="col-2">
+                      <label for="float" class="visually-hidden">float</label>
+                      <input type="text" readonly class="form-control-plaintext" value="Float">
+                    </div>
+                    <div class="col-10">
+                      <div class="col-auto">
+                        <label for="float" class="visually-hidden">float</label>
+                        <input type="number" class="form-control" id="float" name="float" placeholder="float"
+                          step="0.005">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- akhir float -->
+                  <!-- awal date --><input type="hidden" name="page" value="1">
+                  <div class="row">
+                    <div class="col-2">
+                      <label for="date" class="visually-hidden">date</label>
+                      <input type="text" readonly class="form-control-plaintext" value="Date">
+                    </div>
+                    <div class="col-10">
+                      <div class="col-auto">
+                        <label for="date" class="visually-hidden">date</label>
+                        <input type="date" class="form-control" id="date" name="date" placeholder="date">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- akhir date -->
+                  <!-- awal Boolean -->
+                  <div class="row">
+                    <div class="col-2">
+                      <label for="Boolean" class="visually-hidden">Boolean</label>
+                      <input type="text" readonly class="form-control-plaintext" value="Boolean">
+                    </div>
+                    <div class="col-10">
+                      <select class="form-select" aria-label="Default select example" id="boolean" name="boolean">
+                        <option selected disabled>Pilih</option>
+                        <option value=true>True</option>
+                        <option value=false>false</option>
+                      </select>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary"><i class="fa-regular fa-floppy-disk"></i></button>
+                  <a href="/">
+                    <button type="reset" class="btn btn-warning">Cancel</button>
+                  </a>
+            </form>
+            <!-- Akhir Boolean -->
+            <!-- botom -->
+            <!-- akhir boolean -->
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <form action="" method="get" id="form-search">
+              <div class="row">
+                <div class="col-2">
+                  <div class="form-check">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      String
+                    </label>
+                  </div>
+                </div>
+                <div class="col-10">
+                  <div class="col-auto">
+                    <label for="string" class="visually-hidden">string</label>
+                    <input type="text" class="form-control" id="searchString" name="searchString" placeholder="string">
+                  </div>
+                </div>
+              </div>
+              <!-- akhir string -->
+              <!-- integer -->
+              <div class="row">
+                <div class="col-2">
+                  <div class="form-check">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Integer
+                    </label>
+                  </div>
+                </div>
+                <div class="col-10">
+                  <div class="col-auto">
+                    <label for="integer" class="visually-hidden">integer</label>
+                    <input type="number" class="form-control" id="searchInteger" name="searchInteger"
+                      placeholder="integer">
+                  </div>
+                </div>
+              </div>
+              <!-- akhir integer -->
+              <!-- float -->
+              <div class="row">
+                <div class="col-2">
+                  <div class="form-check">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Float
+                    </label>
+                  </div>
+                </div>
+                <div class="col-10">
+                  <div class="col-auto">
+                    <label for="integer" class="visually-hidden">float</label>
+                    <input type="number" class="form-control" id="searchFloat" name="searchFloat" placeholder="Float"
+                      step="0.005">
+                  </div>
+                </div>
+              </div>
+              <!-- akhir float -->
+              <!-- awal date -->
+              <div class="row">
+                <div class="col-2">
+                  <div class="form-check">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Date
+                    </label>
+                  </div>
+                </div>
+                <div class="col-5">
+                  <div class="col-auto">
+                    <label for="date" class="visually-hidden">startDate</label>
+                    <input type="date" class="form-control" id="searchStartDate" name="searchStartDate"
+                      placeholder="date">
+                  </div>
+                </div>
+                <div class="col-5">
+                  <div class="col-auto">
+                    <label for="date" class="visually-hidden">endDate</label>
+                    <input type="date" class="form-control" id="searchEndDate" name="searchEndDate" placeholder="date">
+                  </div>
+                </div>
+              </div>
+              <!-- akhir date -->
+              <!-- boolean -->
+              <div class="row">
+                <div class="col-2">
+                  <div class="form-check">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Boolean
+                    </label>
+                  </div>
+                </div>
+                <div class="col-10">
+                  <select class="form-select" id="searchBoolean" name="searchBoolean"
+                    aria-label="Default select example">
+                    <option value="">Pilih</option>
+                    <option value=true>True</option>
+                    <option value=false>false</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i></button>
+              <a href="/">
+                <button type="reset" class="btn btn-warning" onclick="resetData()"><i class="fa-solid fa-rotate-left"></i></button>
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer text-muted">
+  </div>
+  <div class="card">
+    <h5 class="card-header">Table</h5>
+    <div class="card-body">
+      <table class="table table-sortable   table-striped card-body">
+        <thead class="thead">
+          <tr>
+            <th scope="col" class="no-sort">ID</th>
+            <th scope="col">String</th>
+            <th scope="col">Integer</th>
+            <th scope="col">Float</th>
+            <th scope="col">Date</th>
+            <th scope="col">Boolean</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody id="table-users">
+
+        </tbody>
+      </table>
+      <nav aria-label="...">
+        <div class="row">
+          <div class="col-md-10">
+            <nav aria-label="Page navigation" id="pagination">
+
+            </nav>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <script>
+    let idEdit = null;
+    var params = {
+      page: 1,
+      sortBy: 'strings',
+      sortMode: 'asc'
+    }
+    const readData = () => {
+      fetch(`http://localhost:3001/?${new URLSearchParams(params).toString()}`)
+        .then((response) => {
+          return response.json()
+        })
+        .then((res) => {
+          const { data, pages } = res
+          params = { ...params, pages }
+          let html = ""
+          let offset = (parseInt(params.page) - 1) * params.pages
+          data.forEach((item, index) => {
+            html += `
+            <tr>
+              <td>${index + 1 + offset}</td>
+              <td>${item.strings}</td>
+              <td>${item.integers}</td>
+              <td>${item.floats}</td>
+              <td>${moment(item.dates).format('YYYY-MM-DD')}</td>
+              <td>${item.booleans}</td>
+              <td>
+                <button type="button" class='btn btn-success' onclick='editData(${JSON.stringify(item)})'><i class="fa-solid fa-pen"></i></button>
+                <button type="button" class='btn btn-danger' onclick="removeData('${item._id}')"><i class="fa-solid fa-trash"></i></button>
+              </td>
+          </tr>
+            `
+          });
+          document.getElementById('table-users').innerHTML = html
+          pagination()
+        })
+        .catch((err) => {
+          alert('err tu')
+        })
+    }
+    // add
+    const saveData = () => {
+      const string = document.getElementById('string').value
+      const integer = document.getElementById('integer').value
+      const float = document.getElementById('float').value
+      const date = document.getElementById('date').value
+      const boolean = document.getElementById('boolean').value
+
+      if (idEdit == null) {
+        fetch('http://localhost:3001/', {
+          method: 'POST', // or 'PUT'
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ string, integer, float, date, boolean }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            readData()
+          })
+      } else {
+        fetch(`http://localhost:3001/${idEdit}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ string, integer, float, date, boolean })
+        }).then((response) => response.json()).then((data) => {
+          readData()
+        })
+        idEdit = null;
+      }
+      document.getElementById('string').value = ''
+      document.getElementById('integer').value = ''
+      document.getElementById('float').value = ''
+      document.getElementById('date').value = ''
+      document.getElementById('boolean').value = ''
+      return false
+    }
+    // delete
+    const removeData = (id) => {
+      fetch(`http://localhost:3001/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then((response) => response.json()).then((data) => {
+        readData()
+      })
+    }
+    const editData = (breads) => {
+
+      idEdit = breads._id
+      document.getElementById('string').value = breads.strings
+      document.getElementById('integer').value = breads.integers
+      document.getElementById('float').value = breads.floats
+      document.getElementById('date').value = moment(breads.dates).format('YYYY-MM-DD')
+      document.getElementById('boolean').value = breads.booleans
+
+    }
+    const pagination = () => {
+      let pagination = `<ul class="pagination">
+                               <li class="page-item${params.page == 1 ? ' disabled' : ''}">
+                                 <a class="page-link" id="halaman" href="javascript:void(0)" onclick="changePage(${parseInt(params.page) - 1})" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                 </a>
+                             </li>`
+      for (let i = 1; i <= params.pages; i++) {
+        pagination += `
+        <li class="page-item${i == params.page ? ' active' : ''}"><a class="page-link" id="halaman" href="javascript:void(0)" id="angka" onclick="changePage(${i})">${i}</a></li>`
+      }
+      pagination += `<li class="page-item${params.page == params.pages ? ' disabled' : ''}">
+            <a class="page-link" href="javascript:void(0)" onclick="changePage(${parseInt(params.page) + 1})" id="halaman" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>`
+      document.getElementById('pagination').innerHTML = pagination
+    }
+
+    function changePage(page) {
+      params = { ...params, page }
+      readData()
+      return false
+    }
+
+    function resetData() {
+      document.getElementById('form-search').reset()
+      readData()
+    }
+
+    document.getElementById("form-users").addEventListener("submit", function (event) {
+      event.preventDefault()
+      saveData()
+    });
+
+
+    document.getElementById('form-search').addEventListener('submit', (event) => {
+      event.preventDefault()
+      const page = 1
+      const string = document.getElementById('searchString').value
+      const integer = document.getElementById('searchInteger').value
+      const float = document.getElementById('searchFloat').value
+      const startDate = document.getElementById('searchStartDate').value
+      const endDate = document.getElementById('searchEndDate').value
+      const boolean = document.getElementById('searchBoolean').value
+      params = { ...params, string, integer, float, startDate, endDate, boolean, page }
+      console.log(params)
+      readData()
+    })
+
+
+    function sortTableByColumn(table, column, asc = true) {
+      const dirModifier = asc ? 1 : -1;
+      const tBody = table.tBodies[0];
+      const rows = Array.from(tBody.querySelectorAll("tr"));
+
+      // Sort each row
+      const sortedRows = rows.sort((a, b) => {
+        const aColText = a.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
+        const bColText = b.querySelector(`td:nth-child(${column + 1})`).textContent.trim();
+
+        return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);
+      });
+
+      // Remove all existing TRs from the table
+      while (tBody.firstChild) {
+        tBody.removeChild(tBody.firstChild);
+      }
+
+      // Re-add the newly sorted rows
+      tBody.append(...sortedRows);
+
+      // Remember how the column is currently sorted
+      table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc", "th-sort-desc"));
+      table.querySelector(`th:nth-child(${column + 1})`).classList.toggle("th-sort-asc", asc);
+      table.querySelector(`th:nth-child(${column + 1})`).classList.toggle("th-sort-desc", !asc);
+    }
+
+    document.querySelectorAll(".table-sortable th").forEach(headerCell => {
+      headerCell.addEventListener("click", () => {
+        const tableElement = headerCell.parentElement.parentElement.parentElement;
+        const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
+        const currentIsAscending = headerCell.classList.contains("th-sort-asc");
+
+        sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
+      });
+    });
+
+    readData()
+  </script>
+</body>
+
+</html>

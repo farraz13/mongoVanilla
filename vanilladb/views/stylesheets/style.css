@@ -1,0 +1,60 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+* {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+label {
+  font-size: large;
+}
+
+input {
+  margin: 2px 0px;
+}
+
+.input-group {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font: inherit;
+  color: black;
+  background-color: transparent;
+  outline: 2px solid #000;
+  width: 100%;
+}
+
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(10px, 10px);
+  transition: transform .25s;
+}
+
+.input:focus+.input-label,
+.input:valid+.input-label {
+  transform: translate(10px, -14px) scale(.8);
+  color: white;
+  padding-inline: 5px;
+  background-color: #1E293B;
+  border-radius: 0.5rem;
+  padding: 4px 10px;
+  font-size: 1rem;
+}
+
+
+.input:is(:focus, :valid) {
+  outline-color: #1E293B;
+}
